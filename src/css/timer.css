@@ -1,11 +1,13 @@
 #datetime-picker {
     border: 1px solid #808080;
     border-radius: 4px;
-    width: 272px;
-    height: 40px;
+    min-width: 272px;
+    outline: none;
+    padding: 8px 16px;
+    margin-right: 8px;
 }
 
-button {
+button[data-start] {
     border-radius: 8px;
     padding: 8px 16px;
     width: 75px;
