@@ -12,14 +12,40 @@ button[data-start] {
     padding: 8px 16px;
     width: 75px;
     height: 40px;
-    background-color: #cfcfcf;
+    background-color: #4e75ff;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.50;
     letter-spacing: 0.04em;
+    color: #fff;
+}
+
+button[data-start]:disabled {
+    background-color: #cfcfcf;
     color: #989898;
+}
+
+button[data-start]:not(:disabled):hover {
+    background-color: #6c8cff;
 }
 
 .timer {
     display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    width: 346px;
+    margin-top: 32px;
+}
+
+.value {
+    font-size: 40px;
+    line-height: 1.20;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.label {
+    font-size: 16px;
+    line-height: 1.50;
+    color: #2e2f42;
 }
