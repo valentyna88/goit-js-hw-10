@@ -22,19 +22,16 @@ flatpickr(dateTimePicker, {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose(selectedDates) {
-        handleDateSelection(selectedDates[0]);
+        const date = selectedDates[0];
+        if (date <= new Date()) {
+            iziToast.error({ title: 'Error', message: 'Please choose a date in the future' });
+            startBtn.disabled = true;
+        } else {
+            selectedDate = date;
+            startBtn.disabled = false;
+        }
     },
 });
-
-function handleDateSelection(date) {
-    if (date <= new Date()) {
-        iziToast.error({ title: 'Error', message: 'Please choose a date in the future' });
-        startBtn.disabled = true;
-    } else {
-        selectedDate = date;
-        startBtn.disabled = false;
-    }
-}
 
 startBtn.addEventListener('click', startCountdown);
 
