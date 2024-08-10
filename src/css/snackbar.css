@@ -7,11 +7,12 @@
     color: #2e2f42;
 }
 
-/*.form label {
-    display: block;
-    width: 360px;
+.form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-
+/*
 input[type="number"] {
     border: 1px solid #808080;
     border-radius: 4px;
