@@ -17,13 +17,15 @@ formEl.addEventListener('submit', event => {
             }
         }, delay);
     });
-    promise.then((delay) => {
+    promise
+        .then((delay) => {
         iziToast.success({
             title: 'Success',
             message: `✅ Fulfilled promise in ${delay}ms`,
             position: 'topRight'
         });
-    }).catch((delay) => {
+        })
+        .catch((delay) => {
         iziToast.error({
             title: 'Error',
             message: `❌ Rejected promise in ${delay}ms`,
